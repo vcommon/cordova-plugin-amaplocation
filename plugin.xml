@@ -5,12 +5,12 @@
     <description>AMap Location Plugin for Phonegap</description>
     <license>MIT</license>
     <keywords>amap, location, cordova</keywords>
- 
+    
+    <js-module src="www/amaplocation.js" name="AMapLocation">
+        <clobbers target="window.amapLocation" />
+    </js-module>
     <!-- android -->
     <platform name="android">
-        <js-module src="www/amaplocation.js" name="AMapLocation">
-            <clobbers target="window.amapLocation" />
-        </js-module>
  
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="AMapLocation">
@@ -42,9 +42,6 @@
 
      <!-- ios -->
      <platform name="ios">
-	<js-module src="www/amaplocation.js" name="AMapLocation">
-            <clobbers target="window.amapLocation" />
-        </js-module>	
          <config-file target="config.xml" parent="/*">
              <feature name="AMapLocation">
                  <param name="ios-package" value="CDVAMapLocation" />
