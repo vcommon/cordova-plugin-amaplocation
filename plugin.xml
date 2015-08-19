@@ -47,11 +47,11 @@
         </js-module>	
          <config-file target="config.xml" parent="/*">
              <feature name="AMapLocation">
-                 <param name="ios-package" value="CDVAMapLocation” />
+                 <param name="ios-package" value="CDVAMapLocation" />
              </feature>
          </config-file>
-         <header-file src="src/ios/CDVAMapLocation.h” />
-         <source-file src="src/ios/CDVAMapLocation.m” />
+         <header-file src="src/ios/CDVAMapLocation.h" />
+         <source-file src="src/ios/CDVAMapLocation.m" />
          <framework src="ImageIO.framework" weak="true" />
      </platform>
 </plugin>
