@@ -39,4 +39,19 @@
         <source-file src="src/android/AMapLocation.java" target-dir="src/com/mobishift/cordova/plugins/amaplocation" />   
         <source-file src="src/android/Android_Location_V1.3.1.jar" target-dir="libs" framework="true"/>      
     </platform>         
+
+     <!-- ios -->
+     <platform name="ios">
+	<js-module src="www/amaplocation.js" name="AMapLocation">
+            <clobbers target="window.amapLocation" />
+        </js-module>	
+         <config-file target="config.xml" parent="/*">
+             <feature name="AMapLocation">
+                 <param name="ios-package" value="CDVAMapLocation” />
+             </feature>
+         </config-file>
+         <header-file src="src/ios/CDVAMapLocation.h” />
+         <source-file src="src/ios/CDVAMapLocation.m” />
+         <framework src="ImageIO.framework" weak="true" />
+     </platform>
 </plugin>
